@@ -10,7 +10,7 @@ export default function Home() {
         maxWidth={false}
         sx={{
           bgcolor: "#151d23",
-          px: 13,
+          px: {md: 14, sm: 8, xs: 5},
           py: 8,
         }}
       >
