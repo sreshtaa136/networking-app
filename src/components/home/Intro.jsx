@@ -89,7 +89,7 @@ const Intro = () => {
       <Box
         sx={{
           width: {
-            lg: "41%",
+            lg: "39%",
             md: "44%",
             xs: "100%",
           },

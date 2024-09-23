@@ -1,5 +1,6 @@
 import { Container, Stack } from "@mui/material";
 import Intro from "@/components/home/Intro";
+import About from "@/components/home/About";
 
 export default function Home() {
   return (
@@ -10,7 +11,12 @@ export default function Home() {
         maxWidth={false}
         sx={{
           bgcolor: "#151d23",
-          px: {md: 14, sm: 8, xs: 5},
+          px: {
+            lg: 15,
+            md: 8,
+            sm: 6,
+            xs: 3,
+          },
           py: 8,
         }}
       >
@@ -24,6 +30,7 @@ export default function Home() {
           }}
         >
           <Intro />
+          <About />
         </Stack>
       </Container>
     </>
