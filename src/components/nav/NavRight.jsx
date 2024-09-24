@@ -19,7 +19,7 @@ const NavRight = () => {
             ":hover": {
               bgcolor: "#65ffb5",
               borderColor: "#65ffb5",
-              color: "#151d23",
+              color: "#171638",
             },
             display: {
               xs: "none",
@@ -42,11 +42,11 @@ const NavRight = () => {
             borderRadius: 0,
             bgcolor: "#65ffb5",
             borderColor: "#65ffb5",
-            color: "#151d23",
+            color: "#171638",
             ":hover": {
               color: "#65ffb5",
               borderColor: "#65ffb5",
-              bgcolor: "#151d23",
+              bgcolor: "#171638",
             },
             display: {
               xs: "none",

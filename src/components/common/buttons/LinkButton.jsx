@@ -1,16 +1,16 @@
 import { Button } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-
-const LinkButton = ({ path, buttonText }) => {
+// 65ffb5
+const LinkButton = ({ path, buttonText, bgClr, outlineClr }) => {
   return (
     <Link href={path}>
       <Button
         variant="outlined"
         sx={{
-          color: "#65ffb5",
-          borderColor: "#65ffb5",
-          bgcolor: "#151d23",
+          color: outlineClr ? outlineClr : "#65ffb5",
+          borderColor: outlineClr ? outlineClr : "#65ffb5",
+          bgcolor: bgClr ? bgClr : "#171638",
           borderRadius: 0,
           py: 1,
           width: "fit-content",
@@ -18,9 +18,9 @@ const LinkButton = ({ path, buttonText }) => {
             md: "15px",
           },
           ":hover": {
-            bgcolor: "#65ffb5",
-            borderColor: "#65ffb5",
-            color: "#151d23",
+            bgcolor: outlineClr ? outlineClr : "#65ffb5",
+            borderColor: outlineClr ? outlineClr : "#65ffb5",
+            color: bgClr ? bgClr : "#171638",
           },
         }}
       >

@@ -1,6 +1,7 @@
 import { Container, Stack } from "@mui/material";
 import Intro from "@/components/home/Intro";
 import About from "@/components/home/About";
+import HomeFindEvents from "@/components/home/FindEvents";
 
 export default function Home() {
   return (
@@ -10,14 +11,11 @@ export default function Home() {
         disableGutters
         maxWidth={false}
         sx={{
-          bgcolor: "#151d23",
-          px: {
-            lg: 15,
-            md: 8,
-            sm: 6,
-            xs: 3,
+          bgcolor: "#171638",
+          pt: {
+            md: 5,
+            xs: 0,
           },
-          py: 8,
         }}
       >
         {/* contains sections of the page */}
@@ -30,6 +28,7 @@ export default function Home() {
           }}
         >
           <Intro />
+          <HomeFindEvents />
           <About />
         </Stack>
       </Container>

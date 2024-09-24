@@ -6,13 +6,21 @@ const Intro = () => {
   return (
     <Box
       sx={{
+        bgcolor: "#171638",
         display: { md: "flex", xs: "inline" },
         position: "relative",
         alignItems: "center",
         justifyContent: { md: "space-between" },
+        // DO NOT ALTER
+        px: {
+          lg: 13,
+          md: 8,
+          sm: 0,
+          xs: 0,
+        },
       }}
       width={"100%"}
-      height={400}
+      height={450}
     >
       {/* Hero Section Content */}
       <Stack
@@ -88,13 +96,14 @@ const Intro = () => {
       {/* Hero Section Image */}
       <Box
         sx={{
+          // mb: 5,
           width: {
             lg: "39%",
-            md: "44%",
+            md: "50%",
             xs: "100%",
           },
           height: {
-            lg: "100%",
+            lg: 380,
             md: "90%",
             xs: "100%",
           },

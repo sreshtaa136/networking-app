@@ -6,8 +6,15 @@ const About = () => {
     <Box
       component="section"
       sx={{
-        bgcolor: "#151d23",
+        bgcolor: "#171638",
         width: "100%",
+        // DO NOT ALTER
+        px: {
+          lg: 13,
+          md: 8,
+          sm: 6,
+          xs: 3,
+        },
       }}
     >
       <Stack

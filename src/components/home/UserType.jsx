@@ -75,7 +75,7 @@ const UserType = ({ type, desc, path, btnText, isLast }) => {
                 ":hover": {
                   bgcolor: "#65ffb5",
                   borderColor: "#65ffb5",
-                  color: "#151d23",
+                  color: "#171638",
                 },
               }}
             >

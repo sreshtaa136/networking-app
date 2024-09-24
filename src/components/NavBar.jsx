@@ -38,7 +38,7 @@ export default function Navbar() {
         position="static"
         elevation={0}
         sx={{
-          bgcolor: "#151d23",
+          bgcolor: "#171638",
         }}
       >
         <Toolbar
