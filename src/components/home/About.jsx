@@ -6,7 +6,7 @@ const About = () => {
     <Box
       component="section"
       sx={{
-        bgcolor: "#171638",
+        bgcolor: "transparent",
         width: "100%",
         // DO NOT ALTER
         px: {

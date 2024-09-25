@@ -1,12 +1,13 @@
 import { Box, Typography, Stack } from "@mui/material";
 import Image from "next/image";
 import LinkButton from "../common/buttons/LinkButton";
+import { TEXT_GRADIENT_STYLING } from "@/utils/constants";
 
 const Intro = () => {
   return (
     <Box
       sx={{
-        bgcolor: "#171638",
+        bgcolor: "transparent",
         display: { md: "flex", xs: "inline" },
         position: "relative",
         alignItems: "center",
@@ -20,7 +21,7 @@ const Intro = () => {
         },
       }}
       width={"100%"}
-      height={450}
+      height={550}
     >
       {/* Hero Section Content */}
       <Stack
@@ -63,7 +64,7 @@ const Intro = () => {
       >
         <Typography
           variant="subtitle"
-          color="white"
+          // color="white"
           sx={{
             fontSize: {
               lg: 40,
@@ -74,12 +75,15 @@ const Intro = () => {
             fontWeight: 250,
             lineHeight: 1.2,
             mb: { md: 8, xs: 4 },
+            ...TEXT_GRADIENT_STYLING,
+            color: { md: "transparent", xs: "white" },
+            WebkitTextFillColor: { md: "transparent" },
           }}
         >
-          Where connections <span style={{ color: "#65ffb5" }}>spark</span> and
-          opportunities <span style={{ color: "#65ffb5" }}>meet</span> – host,
+          Where connections <span style={{ color: "white" }}>spark</span> and
+          opportunities <span style={{ color: "white" }}>meet</span> – host,
           sponsor, and discover networking events{" "}
-          <span style={{ color: "#65ffb5" }}>effortlessly</span>.
+          <span style={{ color: "white" }}>effortlessly</span>.
         </Typography>
         <Stack
           direction="row"
@@ -89,8 +93,13 @@ const Intro = () => {
             justifyContent: { md: "flex-start", xs: "center" },
           }}
         >
-          <LinkButton path={"/host"} buttonText={"host"} />
-          <LinkButton path={"/sponsor"} buttonText={"sponsor"} />
+          <LinkButton path={"/host"} buttonText={"host"} outlined py={1} />
+          <LinkButton
+            path={"/sponsor"}
+            buttonText={"sponsor"}
+            outlined
+            py={1}
+          />
         </Stack>
       </Stack>
       {/* Hero Section Image */}
@@ -98,13 +107,13 @@ const Intro = () => {
         sx={{
           // mb: 5,
           width: {
-            lg: "39%",
+            lg: "43%",
             md: "50%",
             xs: "100%",
           },
           height: {
-            lg: 380,
-            md: "90%",
+            lg: 450,
+            md: "80%",
             xs: "100%",
           },
           // position: "relative",
@@ -117,7 +126,7 @@ const Intro = () => {
             position: "relative",
             opacity: {
               md: "100%",
-              xs: "25%",
+              xs: "20%",
             },
           }}
         >

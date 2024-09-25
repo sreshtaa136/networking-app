@@ -1,14 +1,18 @@
+import { TEXT_GRADIENT_STYLING } from "@/utils/constants";
 import { Box, Divider, Stack, Typography } from "@mui/material";
 
 export default function Footer() {
   return (
     <>
+      {/* <Box sx={{display:"flex", justifyContent: "center", }}>
+        <Divider sx={{ borderColor: "white", opacity: 0.1, width: "98%" }} />
+      </Box> */}
       <Box
         m={0}
         p={5}
         px={6}
         sx={{
-          bgcolor: "#171638",
+          bgcolor: "transparent",
         }}
       >
         <Stack
@@ -30,13 +34,14 @@ export default function Footer() {
             variant="h1"
             component="div"
             sx={{
-              color: "#65ffb5",
+              // color: "#65ffb5",
               fontWeight: 500,
               fontSize: {
                 md: 50,
                 sm: 40,
                 xs: 30,
               },
+              ...TEXT_GRADIENT_STYLING
             }}
           >
             LOGO

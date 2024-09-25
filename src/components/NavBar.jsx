@@ -18,6 +18,7 @@ import Link from "next/link";
 import { useState } from "react";
 import NavLinks from "@/components/nav/NavLinks.jsx";
 import NavRight from "./nav/NavRight";
+import { TEXT_GRADIENT_STYLING } from "@/utils/constants";
 
 const pages = ["HOST", "SPONSOR", "FIND EVENTS", "LOG IN", "SIGN UP"];
 
@@ -38,7 +39,7 @@ export default function Navbar() {
         position="static"
         elevation={0}
         sx={{
-          bgcolor: "#171638",
+          bgcolor: "transparent",
         }}
       >
         <Toolbar
@@ -58,13 +59,13 @@ export default function Navbar() {
                 variant="h4"
                 component="div"
                 sx={{
-                  color: "#65ffb5",
                   fontWeight: 500,
                   fontSize: {
                     md: 34,
                     sm: 28,
                     xs: 26,
                   },
+                  ...TEXT_GRADIENT_STYLING,
                 }}
               >
                 LOGO
@@ -169,7 +170,7 @@ export default function Navbar() {
           </Box>
         </Toolbar>
       </AppBar>
-      <Divider sx={{ borderColor: "white", opacity: 0.1 }} />
+      {/* <Divider sx={{ borderColor: "white", opacity: 0.1 }} /> */}
     </Container>
   );
 }

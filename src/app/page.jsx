@@ -11,9 +11,9 @@ export default function Home() {
         disableGutters
         maxWidth={false}
         sx={{
-          bgcolor: "#171638",
+          bgcolor: "transparent",
           pt: {
-            md: 5,
+            md: 1,
             xs: 0,
           },
         }}
