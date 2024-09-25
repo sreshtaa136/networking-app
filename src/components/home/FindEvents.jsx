@@ -82,8 +82,9 @@ const HomeFindEvents = () => {
       <LinkButton
         path={"/find-events"}
         buttonText={"See all events"}
-        bgClr={"#65ffb5"}
-        outlineClr={"#171638"}
+        outlined
+        dark
+        py={1}
       />
     </Box>
   );

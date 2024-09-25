@@ -1,62 +1,14 @@
 import Link from "next/link";
-import { Button } from "@mui/material";
+import { Button, Stack } from "@mui/material";
+import LinkButton from "../common/buttons/LinkButton";
 
 const NavRight = () => {
   return (
     <>
-      <Link href={"/login"}>
-        <Button
-          variant="outlined"
-          sx={{
-            fontSize: {
-              md: 14,
-              sm: 12,
-            }, // rwd not working
-            width: "max-content",
-            borderRadius: 0,
-            color: "#65ffb5",
-            borderColor: "#65ffb5",
-            ":hover": {
-              bgcolor: "#65ffb5",
-              borderColor: "#65ffb5",
-              color: "#171638",
-            },
-            display: {
-              xs: "none",
-              sm: "block",
-            },
-          }}
-        >
-          LOG IN
-        </Button>
-      </Link>
-      <Link href={"/signup"}>
-        <Button
-          variant="outlined"
-          sx={{
-            fontSize: {
-              md: 14,
-              sm: 12,
-            }, // rwd not working
-            width: "max-content",
-            borderRadius: 0,
-            bgcolor: "#65ffb5",
-            borderColor: "#65ffb5",
-            color: "#171638",
-            ":hover": {
-              color: "#65ffb5",
-              borderColor: "#65ffb5",
-              bgcolor: "#171638",
-            },
-            display: {
-              xs: "none",
-              sm: "block",
-            },
-          }}
-        >
-          SIGN UP
-        </Button>
-      </Link>
+      <Stack direction={"row"} gap={2}>
+        <LinkButton path={"/login"} buttonText={"login"} outlined />
+        <LinkButton path={"/signup"} buttonText={"signup"} />
+      </Stack>
     </>
   );
 };

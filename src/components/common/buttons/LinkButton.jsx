@@ -1,28 +1,40 @@
 import { Button } from "@mui/material";
 import Link from "next/link";
 import React from "react";
-// 65ffb5
-const LinkButton = ({ path, buttonText, bgClr, outlineClr }) => {
+
+const LinkButton = ({ path, buttonText, outlined, dark, py, endIcon }) => {
+  // pov: outlined styling
+  const normal = dark
+    ? { color: "#171638", borderColor: "#171638", bgcolor: "transparent" }
+    : { color: "#FFFFFF", borderColor: "#FFFFFF", bgcolor: "transparent" };
+
+  const hover = dark
+    ? {
+        color: "#FFFFFF",
+        borderColor: "#171638",
+        bgcolor: "#171638",
+      }
+    : { color: "#171638", borderColor: "#FFFFFF", bgcolor: "#FFFFFF" };
+
+  const customStyling = {
+    borderRadius: 0,
+    width: "fit-content",
+    fontSize: {
+      md: "15px",
+    },
+    py: py,
+  };
+
   return (
     <Link href={path}>
       <Button
         variant="outlined"
-        sx={{
-          color: outlineClr ? outlineClr : "#65ffb5",
-          borderColor: outlineClr ? outlineClr : "#65ffb5",
-          bgcolor: bgClr ? bgClr : "#171638",
-          borderRadius: 0,
-          py: 1,
-          width: "fit-content",
-          fontSize: {
-            md: "15px",
-          },
-          ":hover": {
-            bgcolor: outlineClr ? outlineClr : "#65ffb5",
-            borderColor: outlineClr ? outlineClr : "#65ffb5",
-            color: bgClr ? bgClr : "#171638",
-          },
-        }}
+        endIcon={endIcon}
+        sx={
+          outlined
+            ? { ...normal, ":hover": hover, ...customStyling }
+            : { ...hover, ":hover": normal, ...customStyling }
+        }
       >
         {buttonText}
       </Button>

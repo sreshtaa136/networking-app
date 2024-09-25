@@ -1,6 +1,6 @@
-import { Box, Typography, Button, Divider } from "@mui/material";
+import { Box, Typography, Divider } from "@mui/material";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Link from "next/link";
+import LinkButton from "../common/buttons/LinkButton";
 
 const UserType = ({ type, desc, path, btnText, isLast }) => {
   return (
@@ -27,8 +27,6 @@ const UserType = ({ type, desc, path, btnText, isLast }) => {
               xs: 0.5,
             },
           }}
-          color="#65ffb5"
-          width="50%"
         >
           {type}
         </Typography>
@@ -60,28 +58,13 @@ const UserType = ({ type, desc, path, btnText, isLast }) => {
           >
             {desc}
           </Typography>
-          <Link href={path}>
-            <Button
-              variant="outlined"
-              color="primary"
-              endIcon={<ArrowForwardIcon />}
-              sx={{
-                color: "#65ffb5",
-                borderColor: "#65ffb5",
-                borderRadius: 0,
-                py: 1.3,
-                // width: "30%",
-                width: "fit-content",
-                ":hover": {
-                  bgcolor: "#65ffb5",
-                  borderColor: "#65ffb5",
-                  color: "#171638",
-                },
-              }}
-            >
-              {btnText}
-            </Button>
-          </Link>
+          <LinkButton
+            path={path}
+            buttonText={btnText}
+            outlined
+            py={1}
+            endIcon={<ArrowForwardIcon />}
+          />
         </Box>
       </Box>
       {!isLast && <Divider sx={{ borderColor: "white", opacity: 0.3 }} />}
