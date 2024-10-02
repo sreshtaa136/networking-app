@@ -2,6 +2,9 @@ import { Container, Stack } from "@mui/material";
 import Intro from "@/components/home/Intro";
 import About from "@/components/home/About";
 import HomeFindEvents from "@/components/home/FindEvents";
+import Quote from "@/components/home/Quote";
+import SignUp from "@/components/home/SignUp";
+import ContactUs from "@/components/home/ContactUs";
 
 export default function Home() {
   return (
@@ -30,6 +33,9 @@ export default function Home() {
           <Intro />
           <HomeFindEvents />
           <About />
+          <Quote />
+          <SignUp />
+          <ContactUs />
         </Stack>
       </Container>
     </>

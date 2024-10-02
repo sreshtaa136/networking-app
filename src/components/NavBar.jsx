@@ -20,7 +20,7 @@ import NavLinks from "@/components/nav/NavLinks.jsx";
 import NavRight from "./nav/NavRight";
 import { TEXT_GRADIENT_STYLING } from "@/utils/constants";
 
-const pages = ["HOST", "SPONSOR", "FIND EVENTS", "LOG IN", "SIGN UP"];
+const pages = ["HOST", "SPONSOR", "FIND EVENTS"];
 
 export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -58,6 +58,7 @@ export default function Navbar() {
               <Typography
                 variant="h4"
                 component="div"
+                mr={4}
                 sx={{
                   fontWeight: 500,
                   fontSize: {
@@ -68,14 +69,14 @@ export default function Navbar() {
                   ...TEXT_GRADIENT_STYLING,
                 }}
               >
-                LOGO
+                NN
               </Typography>
             </Link>
             {/* PAGE LINKS */}
             <NavLinks />
           </Stack>
           {/* NAV RIGHT */}
-          <Stack
+          {/* <Stack
             direction={"row"}
             spacing={2}
             sx={{
@@ -86,7 +87,7 @@ export default function Navbar() {
             }}
           >
             <NavRight />
-          </Stack>
+          </Stack> */}
           {/* RESPONSIVE BURGER MENU */}
           <Box
             sx={{

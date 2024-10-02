@@ -4,9 +4,6 @@ import { Box, Divider, Stack, Typography } from "@mui/material";
 export default function Footer() {
   return (
     <>
-      {/* <Box sx={{display:"flex", justifyContent: "center", }}>
-        <Divider sx={{ borderColor: "white", opacity: 0.1, width: "98%" }} />
-      </Box> */}
       <Box
         m={0}
         p={5}
@@ -41,10 +38,10 @@ export default function Footer() {
                 sm: 40,
                 xs: 30,
               },
-              ...TEXT_GRADIENT_STYLING
+              ...TEXT_GRADIENT_STYLING,
             }}
           >
-            LOGO
+            NN
           </Typography>
           <Stack
             direction="row"
@@ -69,7 +66,7 @@ export default function Footer() {
                 },
               }}
             >
-              (123) 456 7890 info@logo.com
+              (123) 456 7890 info@networknow.com
             </Typography>
             <Typography
               sx={{
@@ -111,10 +108,10 @@ export default function Footer() {
             }}
           >
             {" "}
-            LOGO 2023
+            Network Now 2024
           </Box>
           <Stack direction="row" spacing={{ xs: 2, sm: 3, md: 5 }}>
-            <Typography
+            {/* <Typography
               variant="body"
               sx={{
                 color: "white",
@@ -145,7 +142,7 @@ export default function Footer() {
               }}
             >
               CONTACT
-            </Typography>
+            </Typography> */}
             <Typography
               variant="body"
               sx={{

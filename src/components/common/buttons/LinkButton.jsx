@@ -2,7 +2,16 @@ import { Button } from "@mui/material";
 import Link from "next/link";
 import React from "react";
 
-const LinkButton = ({ path, buttonText, outlined, dark, py, endIcon }) => {
+const LinkButton = ({
+  path,
+  buttonText,
+  outlined,
+  dark,
+  py,
+  my,
+  endIcon,
+  handleButtonClick,
+}) => {
   // pov: outlined styling
   const normal = dark
     ? { color: "#171638", borderColor: "#171638", bgcolor: "transparent" }
@@ -23,9 +32,10 @@ const LinkButton = ({ path, buttonText, outlined, dark, py, endIcon }) => {
       md: "15px",
     },
     py: py,
+    my: my,
   };
 
-  return (
+  return path ? (
     <Link href={path}>
       <Button
         variant="outlined"
@@ -39,6 +49,20 @@ const LinkButton = ({ path, buttonText, outlined, dark, py, endIcon }) => {
         {buttonText}
       </Button>
     </Link>
+  ) : (
+    <Button
+      variant="outlined"
+      type="submit"
+      endIcon={endIcon}
+      onClick={handleButtonClick}
+      sx={
+        outlined
+          ? { ...normal, ":hover": hover, ...customStyling }
+          : { ...hover, ":hover": normal, ...customStyling }
+      }
+    >
+      {buttonText}
+    </Button>
   );
 };
 
